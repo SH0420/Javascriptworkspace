@@ -13,6 +13,7 @@
         // 숫자
         // 날짜
         // 논리형
+        // 객체
 
         var age;
         age = 10;
@@ -32,10 +33,20 @@
         document.write(name + "<br>");
 
         name = "홍길동"; //var 선언된 변수의 호이스팅(hoisting)
-        name = '이순신'  //변수는 대소문자를 구분
+        name = '이순신';  //변수는 대소문자를 구분
 
         //ES6
-        //var,let,cont
+        //var,let,const
+
+        // var :
+        // 1. 같은 이름으로 변수 선언가능
+        // 2. 호이스팅 가능
+        // 3. 전역변수
+
+        //let : 
+        //1. 같은 이름으로 변수 선언불가 
+        //2. 호이스팅 불가
+        //3. 블록레벨 스코프(범위)
 
         let num;
         num = 1;
@@ -49,8 +60,30 @@
 
         let num2;      //같은 이름의 변수 선언할 수 없다.
         num2 = 1000;
-        documnet.write(num + "<br>");
+        document.write(num + "<br>");
 
+        var x = 1;
+
+        if(true){
+            var x = 5; //전역변수
+        }
+
+        document.write(x + "<br>");  //5
+
+        let y = 1;
+
+        if(true) {
+            let y = 5; 
+        }
+
+        document.write(y + "<br>"); //1
+
+        const name = 'hong';
+        document.write(name + "<br>");
+
+       // name = 'kim'; //error
+       // documnet.write(name + "<br>");
+        
     </script>
 
     <style>
