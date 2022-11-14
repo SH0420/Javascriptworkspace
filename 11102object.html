@@ -114,11 +114,11 @@
         document.write("<img src=\"images/game_" + com +".jpg\">");
 
         if(com ==me){
-            document.write("tie")
-        }else if( me>com){
-            document.write("you win")
+            document.write("<h2>tie<h2>")
+        }else if( me-com==1 || me-com==-2  ){
+            document.write("<h2>you win<h2>")
         }else{
-            document.write("you lose")
+            document.write("<h2>you lose<h2>")
         }
 
         
